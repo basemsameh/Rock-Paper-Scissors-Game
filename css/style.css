@@ -70,14 +70,10 @@ header .row #scoreNum {
   max-width: 350px;
 }
 
-#triangle .btn {
+#triangle .btn,
+#challenge .btn-icon {
   height: 110px;
   width: 110px;
-}
-
-#challenge .btn-icon {
-  height: 100px;
-  width: 100px;
 }
 
 #triangle .btn::before,
