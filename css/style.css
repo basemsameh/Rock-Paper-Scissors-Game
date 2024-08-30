@@ -1,0 +1,157 @@
+@import url(https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+/* Start of general styling */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.2s linear 0s;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --Dark-Text: #3b4363;
+  --Score-Text: #2a46c0;
+  --Header-Outline: #606e85;
+  --Scissors-Gradient: linear-gradient(to top, #ec9e0e, #eca922);
+  --Paper-Gradient: linear-gradient(to top, #4865f4, #5671f5);
+  --Rock-Gradient: linear-gradient(to top, #db2e4e, #dd405d);
+  --Cyan: #40b9ce to #52bed1;
+}
+
+.hide {
+  display: none;
+}
+/* Ends of general styling */
+
+body {
+  background-image: linear-gradient(to bottom, #1f3756, #141539);
+  height: 98.9vh;
+}
+
+header {
+  width: 100%;
+  max-width: 700px;
+}
+
+header .row figure {
+  max-width: 200px;
+}
+
+header .row .score span {
+  color: var(--Score-Text);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+header .row .score .score-body {
+  width: 100%;
+  max-width: 150px;
+}
+
+header .row #scoreNum {
+  font-size: 55px;
+  color: var(--Dark-Text);
+  font-weight: bold;
+}
+
+/* */
+#icons {
+  max-width: 700px;
+  padding: 60px 0 50px;
+}
+
+#triangle {
+  max-width: 350px;
+}
+
+#triangle .btn {
+  height: 110px;
+  width: 110px;
+}
+
+#challenge .btn-icon {
+  height: 100px;
+  width: 100px;
+}
+
+#triangle .btn::before,
+#challenge .btn-icon::before {
+  content: "";
+  position: absolute;
+  height: 140px;
+  width: 140px;
+  background-image: var(--Scissors-Gradient);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: all 0.2s linear 0s;
+}
+
+#challenge .btn-icon::before {
+  height: 150px;
+  width: 150px;
+}
+
+#triangle #paperBtn:hover::before {
+  box-shadow: 0 0 50px blue;
+}
+
+#triangle #rockBtn:hover::before {
+  box-shadow: 0 0 50px red;
+}
+
+#triangle #scissorsBtn:hover::before {
+  box-shadow: 0 0 50px yellow;
+}
+
+#triangle #paperBtn::before,
+#challenge #paperBtn::before {
+  background-image: var(--Paper-Gradient);
+}
+
+#triangle #rockBtn {
+  left: 35%;
+}
+
+#triangle #rockBtn::before,
+#challenge #rockBtn::before {
+  background-image: var(--Rock-Gradient);
+}
+
+#rulesBtn {
+  letter-spacing: 2px;
+  right: 20px;
+  bottom: 0;
+}
+
+#playAgain {
+  font-weight: 600;
+}
+
+@media (width >= 764px) {
+  #triangle .btn {
+    height: 120px;
+    width: 120px;
+  }
+
+  #triangle .btn::before {
+    height: 160px;
+    width: 160px;
+  }
+
+  #challenge .btn-icon {
+    height: 150px;
+    width: 150px;
+  }
+
+  #challenge .btn-icon::before {
+    height: 200px;
+    width: 200px;
+  }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Rock, Paper, Scissors</title>
+</head>
+
+<body>
+  <!-- Container -->
+  <main class="container position-relative mt-2">
+    <!-- Score -->
+    <header class="text-white border rounded-3 p-3 m-auto shadow">
+      <div class="row align-items-center">
+        <figure class="logo col-8 m-0">
+          <img src="images/logo.svg" alt="Logo" class="w-100">
+        </figure>
+        <div class="score col-4 text-center ms-auto">
+          <div class="score-body bg-white rounded-3 ms-auto py-2">
+            <span class="fs-5">Score</span>
+            <h2 id="scoreNum">0</h2>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Icons Section -->
+    <section id="icons" class="mx-auto text-center">
+      <!-- Triangle Image -->
+      <figure id="triangle" class="m-auto position-relative">
+        <img src="images/bg-triangle.svg" alt="bg-triangle" class="w-100 position-relative z-n1">
+        <!-- Paper -->
+        <button id="paperBtn" class="btn position-absolute top-0 start-0 rounded-circle bg-white">
+          <img src="images/icon-paper.svg" alt="Paper">
+        </button>
+        <!-- Scissors -->
+        <button id="scissorsBtn" class="btn position-absolute top-0 end-0 rounded-circle bg-white">
+          <img src="images/icon-scissors.svg" alt="Scissors">
+        </button>
+        <button id="rockBtn" class="btn position-absolute bottom-0 rounded-circle bg-white">
+          <img src="images/icon-rock.svg" alt="Rock">
+        </button>
+      </figure>
+      <!-- Challenge -->
+      <div id="challenge" class="hide">
+        <div class="row">
+          <!-- You Picked -->
+          <div class="youPicked col-6 p-4">
+            <div class="text-white p-4">
+              <h4 class="mb-5 pb-4 pb-md-0">You Picked</h4>
+            </div>
+          </div>
+          <!-- The House Picked -->
+          <div class="housePicked col-6 p-4">
+            <div class="text-white p-4">
+              <h4 class="mb-5">The House Picked</h4>
+            </div>
+          </div>
+        </div>
+        <!-- Result -->
+        <div class="result hide">
+          <h2 class="text-white fs-1 mb-4" id="winOrLose"></h2>
+          <button class="btn btn-light px-4 py-2" id="playAgain">Play Again</button>
+        </div>
+      </div>
+    </section>
+    <!-- Rules Button -->
+    <button id="rulesBtn" class="btn btn-outline-light px-4 position-absolute" data-bs-toggle="modal"
+      data-bs-target="#showRules">
+      Rules
+    </button>
+    <!-- Rules Button Modal -->
+    <div class="modal fade" id="showRules" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered p-4 rounded-3">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center p-5">
+            <img src="images/image-rules.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
