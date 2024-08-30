@@ -60,7 +60,7 @@ This project is open-source and available under the [MIT License](LICENSE).
 ## Links
 
 - **Repo**: [Github Repo](https://github.com/basemsameh/Rock-Paper-Scissors-Game.git)
-- **Demo**: [Live URL](https://basemsameh.github.io/Advice-Generator-App/)
+- **Demo**: [Live URL](https://basemsameh.github.io/Rock-Paper-Scissors-Game/)
 
 ## Author
 
